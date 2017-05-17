@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   nq_newlist.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yherrera <yherrera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: thewrenchess <thewrenchess@student.42.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 13:33:11 by yherrera          #+#    #+#             */
-/*   Updated: 2017/05/16 13:47:21 by yherrera         ###   ########.fr       */
+/*   Updated: 2017/05/17 12:17:34 by thewrenchess     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../hdrs/nqueens.h"
 
-static char	*ft_newboard(void) {
+char	*nq_newboard(void) {
 	char	*result;
 	int		i;
 
@@ -27,11 +27,11 @@ static char	*ft_newboard(void) {
 	return result;
 }
 
-t_list		*nq_newlist(void) {
+t_list	*nq_newlist(void) {
 	t_list	*result;
 
 	result = (t_list*)malloc(sizeof(t_list));
-	result->board = ft_newboard();
+	result->board = NULL;
 	result->next = NULL;
 	return result;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   nq_listdel.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yherrera <yherrera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: thewrenchess <thewrenchess@student.42.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 21:34:34 by yherrera          #+#    #+#             */
-/*   Updated: 2017/05/16 15:53:16 by yherrera         ###   ########.fr       */
+/*   Updated: 2017/05/17 12:46:21 by thewrenchess     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,24 +35,4 @@ void		nq_listdel(t_list **lst) {
 		tmp1 = tmp2;
 	}
 	*lst = tmp1;
-}
-
-void		nq_listdellast(t_list **lst) {
-	t_list	*tmp1;
-	t_list	*tmp2;
-
-	if (!*lst)
-		return ;
-	if (!(*lst)->next) {
-		nq_listdel(lst);
-		return ;
-	}
-	tmp1 = *lst;
-	tmp2 = tmp1->next;
-	while (tmp2 && tmp2->next) {
-		tmp1 = tmp2;
-		tmp2 = tmp1->next;
-	}
-	ft_strdel(&(tmp2->board));
-	tmp1->next = NULL;
 }

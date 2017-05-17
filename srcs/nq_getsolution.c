@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   nq_getsolution.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yherrera <yherrera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: thewrenchess <thewrenchess@student.42.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 14:02:17 by yherrera          #+#    #+#             */
-/*   Updated: 2017/05/16 16:40:48 by yherrera         ###   ########.fr       */
+/*   Updated: 2017/05/17 12:36:54 by thewrenchess     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,67 +88,43 @@ static void	nq_putonequeen(char **board, int i, char c) {
 	}
 }
 
-static void	nq_putqueen(t_list **nodes, int n) {
-	if (n <= 0)
+static void	nq_clearnumber(char **board) {
+	int	i;
+
+	for (i = 0; (*board)[i]; i++) {
+		if ((*board)[i] >= '1' && (*board)[i] <= '8')
+			(*board)[i] = '.';
+	}
+}
+
+static void	nq_putqueen(t_list **node, int n, char **board, int i) {
+	if (n == 0) {
+		(*node)->board = strdup(*board);
+		nq_clearnumber(&((*node)->board));
+		(*node)->next = nq_newlist();
+		*node = (*node)->next;
+		return ;
+	}
+	while (i < 71 - (n - 1) * 9) {
+		while ((*board)[i] && (*board)[i] != '.')
+			i++;
+		if (i >= 72)
+			return ;
+		nq_putonequeen(board, i, n + '0');
+		nq_putqueen(node, n - 1, board, i);
+		nq_removelastqueen(board, i, n + '0');
+		i++;
+	}
 }
 
 t_list		*nq_getsolution(const int n) {
 	t_list	*head;
 	t_list	*node;
+	char	*board;
 
 	head = nq_newlist();
 	node = head;
-	nq_putqueen(&node, n);
+	board = nq_newboard();
+	nq_putqueen(&node, n, &board, 0);
 	return head;
 }
-
-// static int	nq_putqueen(char **board, int n) {
-// 	static int	index;
-// 	int			*corrs;
-// 	int			count;
-// 	int			i;
-
-// 	corrs = (int*)malloc(sizeof(i) * n);
-// 	count = n;
-// 	for(i = index; i < 71; i++) {
-// 		if ((*board)[i] == '.') {
-// 			nq_putonequeen(board, i, count + '0');
-// 			corrs[n - count] = i;
-// 			count--;
-// 		}
-// 		if (!count)
-// 			break ;
-// 		if (i == 70) {
-// 			count++;
-// 			nq_removelastqueen(board, corrs[n - count], count + '0');
-// 			i = corrs[n - count];
-// 		}
-// 	}
-// 	free(corrs);
-// 	corrs = NULL;
-// 	index++;
-// 	printf("index: %d; count: %d\n", index, count);
-// 	if (count || index >= 71 - (n - 1) * 9)
-// 		return -1;
-// 	return 0;
-// }
-
-// t_list		*nq_getsolution(const int n) {
-// 	t_list	*head;
-// 	t_list	*node;
-// 	int		ret;
-
-// 	head = nq_newlist();
-// 	node = head;
-// 	ret = 0;
-// 	while (!ret) {
-// 		ret = nq_putqueen(&(node->board), n);
-// 		printf("%d\n", ret);
-// 		if (!ret) {
-// 			node->next = nq_newlist();
-// 			node = node->next;
-// 		} else
-// 			nq_listdellast(&head);
-// 	}
-// 	return head;
-// }

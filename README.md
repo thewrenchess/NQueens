@@ -1,20 +1,15 @@
 # NQueens
-libft is a library of useful C function
+NQueens gives all combination of placing `n` chess queens on an 8x8 chessboard so that no two queens threaten each other. 
 
 ## Installation
 1. Download this repository to your working directory
-2. `make -C libft`
-3. `make -C libft clean`
+2. `make`
 
 ## Usage
-Include `libft/libft.a` in your compile command
+`./nqueens <integer between 1 and 8>`
 
 ### Note
-- If compiling with `libft/libft.a` does not seem to establish reference with your program compiler, please compile with _libft_ source files instead. ie. `libft/srcs/*/*.c`
-- Most of the functions are protected agains `NULL` inputs, which can make debugging stage a little confusing
+- Depending on your system, if the program does not make, You may need to edit the `Makefile` and replace `HDRS = hdrs` with `HDRS = hdrs/nqueens.h`
 
 ## Known Bugs
-- ft_cryptor does not work for binary files or files containing unicode
-- ft_strjoin may cause memory, use a `temp` string
-
-<!-- C, Linked List, Recursion, Static Viables, File Control -->
+- Please feel free to try and break it :p
