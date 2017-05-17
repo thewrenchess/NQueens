@@ -6,43 +6,32 @@
 /*   By: yherrera <yherrera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 13:33:11 by yherrera          #+#    #+#             */
-/*   Updated: 2017/05/15 21:41:07 by yherrera         ###   ########.fr       */
+/*   Updated: 2017/05/16 13:47:21 by yherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../hdrs/nqueens.h"
 
-static void	ft_bzero(void *s, size_t n) {
-	unsigned char	*temp;
-	size_t			i;
+static char	*ft_newboard(void) {
+	char	*result;
+	int		i;
 
-	if (!s)
-		return ;
-	temp = (unsigned char*)s;
-	for (i = 0; i < n; i++) {
-		temp[i] = '\0';
+	result = (char*)malloc(sizeof(result) * 73);
+	for (i = 0; i < 72; i++) {
+		if (!((i + 1) % 9))
+			result[i] = '\n';
+		else
+			result[i] = '.';
 	}
-}
-
-static void	*ft_memalloc(size_t size) {
-	void	*rs;
-
-	rs = malloc(size);
-	if (!rs)
-		return (NULL);
-	ft_bzero(rs, size);
-	return (rs);
-}
-
-static char	*ft_strnew(size_t size) {
-	return ((char*)ft_memalloc(size + 1));
+	result[i] = '\0';
+	return result;
 }
 
 t_list		*nq_newlist(void) {
 	t_list	*result;
 
 	result = (t_list*)malloc(sizeof(t_list));
-	result->board = ft_strnew(72);
+	result->board = ft_newboard();
 	result->next = NULL;
-	return (result);
+	return result;
 }

@@ -17,3 +17,4 @@ Include `libft/libft.a` in your compile command
 - ft_cryptor does not work for binary files or files containing unicode
 - ft_strjoin may cause memory, use a `temp` string
 
+<!-- C, Linked List, Recursion, Static Viables, File Control -->

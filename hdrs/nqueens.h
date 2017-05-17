@@ -6,7 +6,7 @@
 /*   By: yherrera <yherrera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 13:18:55 by yherrera          #+#    #+#             */
-/*   Updated: 2017/05/15 21:41:13 by yherrera         ###   ########.fr       */
+/*   Updated: 2017/05/16 15:53:16 by yherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@ t_list				*nq_getsolution(const int n);
 t_list				*nq_newlist(void);
 void				ft_strdel(char **as);
 void				nq_listdel(t_list **lst);
+void				nq_listdellast(t_list **lst);
 
 #endif
