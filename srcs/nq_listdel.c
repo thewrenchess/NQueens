@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   nq_listdel.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thewrenchess <thewrenchess@student.42.fr>  +#+  +:+       +#+        */
+/*   By: yherrera <yherrera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 21:34:34 by yherrera          #+#    #+#             */
-/*   Updated: 2017/05/17 12:46:21 by thewrenchess     ###   ########.fr       */
+/*   Updated: 2017/05/18 10:53:47 by yherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

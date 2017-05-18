@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   nq_writetofile.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thewrenchess <thewrenchess@student.42.fr>  +#+  +:+       +#+        */
+/*   By: yherrera <yherrera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/17 11:24:49 by thewrenchess      #+#    #+#             */
-/*   Updated: 2017/05/17 12:51:33 by thewrenchess     ###   ########.fr       */
+/*   Created: 2017/05/17 11:24:49 by yherrera          #+#    #+#             */
+/*   Updated: 2017/05/18 10:55:36 by yherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

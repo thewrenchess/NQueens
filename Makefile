@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: thewrenchess <thewrenchess@student.42.fr>  +#+  +:+       +#+         #
+#    By: yherrera <yherrera@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/15 13:18:07 by yherrera          #+#    #+#              #
-#    Updated: 2017/05/17 12:14:44 by thewrenchess     ###   ########.fr        #
+#    Updated: 2017/05/18 10:55:00 by yherrera         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   nq_getsolution.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thewrenchess <thewrenchess@student.42.fr>  +#+  +:+       +#+        */
+/*   By: yherrera <yherrera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 14:02:17 by yherrera          #+#    #+#             */
-/*   Updated: 2017/05/17 12:36:54 by thewrenchess     ###   ########.fr       */
+/*   Updated: 2017/05/18 10:53:45 by yherrera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -8,8 +8,5 @@ NQueens gives all combination of placing `n` chess queens on an 8x8 chessboard s
 ## Usage
 `./nqueens <integer between 1 and 8>`
 
-### Note
-- Depending on your system, if the program does not make, You may need to edit the `Makefile` and replace `HDRS = hdrs` with `HDRS = hdrs/nqueens.h`
-
 ## Known Bugs
 - Please feel free to try and break it :p
